@@ -11,5 +11,4 @@ RUN echo "web-app" > /app/tmp_ai_check.txt
 
 EXPOSE 5000
 
-ENTRYPOINT ["python3"]
-CMD ["app.py"]
+ENTRYPOINT ["flask", "run" ,"--host=0.0.0.0"]
