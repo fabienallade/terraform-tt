@@ -4,11 +4,12 @@ resource "aws_security_group" "alb" {
   vpc_id      = data.aws_vpc.shared.id
 
   egress {
+    description = "Outgoing Interconnexion"
     from_port        = 0
     to_port          = 0
     protocol         = "-1"
-    cidr_blocks      = ["0.0.0.0/0"]
-    ipv6_cidr_blocks = ["::/0"]
+    cidr_blocks      = ["10.1.1.1/32"]
+    ipv6_cidr_blocks = ["::ffff:a01:101"]
   }
 
   tags = {
