@@ -8,6 +8,10 @@ resource "aws_acm_certificate" "main" {
   lifecycle {
     create_before_destroy = true
   }
+
+  tags = {
+    Purpose = "${var.name_prefix} Certificate validation" 
+  }
 }
 
 resource "aws_route53_record" "validation" {
