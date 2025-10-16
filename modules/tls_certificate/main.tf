@@ -10,7 +10,7 @@ resource "aws_acm_certificate" "main" {
   }
 
   tags = {
-    Purpose = "${var.name_prefix} Certificate validation" 
+    Purpose = "${var.tag_certification}" 
   }
 }
 

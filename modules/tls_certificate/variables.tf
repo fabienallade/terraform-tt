@@ -12,3 +12,9 @@ variable "hosted_zone_id" {
   description = "Route 53 Hosted Zone ID for DNS validation."
   type        = string
 }
+
+variable "tag_certification" {
+  description = "Tag for Cerficate validation"
+  type        = string
+  default     = "Cerficate validation"
+}

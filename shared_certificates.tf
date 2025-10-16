@@ -7,7 +7,7 @@ resource "aws_acm_certificate" "shared" {
   }
 
   tags = {
-    Purpose = "Shared Global Certificate validation" 
+    Purpose = "Shared Global Certificate validation"
   }
 }
 
